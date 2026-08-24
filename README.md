@@ -974,60 +974,8 @@ These extensions are outside the initial MVP unless sufficient data and developm
 
 ---
 
-# 28. Repository Structure
 
-A proposed repository structure is:
-
-```text
-campus-maintenance-intelligence/
-│
-├── README.md
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── sample/
-│
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_incident_structure.ipynb
-│   ├── 03_duplicate_detection.ipynb
-│   ├── 04_prioritization.ipynb
-│   ├── 05_recurrence_prediction.ipynb
-│   └── 06_optimization.ipynb
-│
-├── src/
-│   ├── preprocessing/
-│   ├── structure/
-│   ├── clustering/
-│   ├── prioritization/
-│   ├── prediction/
-│   ├── optimization/
-│   └── evaluation/
-│
-├── models/
-│
-├── api/
-│
-├── dashboard/
-│
-├── tests/
-│
-├── docs/
-│   ├── architecture/
-│   ├── experiments/
-│   └── evaluation/
-│
-├── requirements.txt
-│
-└── .gitignore
-```
-
-The repository structure may change as implementation progresses.
-
----
-
-# 29. Project Philosophy
+# 28. Project Philosophy
 
 The project follows four principles:
 
@@ -1052,7 +1000,7 @@ The project should produce both:
 
 ---
 
-# 30. Final Vision
+# 29. Final Vision
 
 Campus Maintenance Intelligence aims to transform campus maintenance from a primarily reactive workflow into a **data-driven, predictive and optimization-oriented process**.
 
