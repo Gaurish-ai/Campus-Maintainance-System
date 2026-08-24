@@ -1,0 +1,359 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\onehalfspacing
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Campus Maintenance Intelligence}
+\rhead{Project Proposal}
+\cfoot{\thepage}
+
+\begin{document}
+
+% =========================
+% FIRST PAGE
+% =========================
+
+\begin{titlepage}
+
+\begin{center}
+
+\vspace*{1.2cm}
+
+{\Huge \textbf{Campus Maintenance Intelligence}}
+
+\vspace{0.4cm}
+
+{\Large An Intelligent Campus Maintenance Management System}
+
+\vspace{1cm}
+
+{\large Project Proposal for UCS503P}
+
+\vspace{1cm}
+
+\textbf{Submitted to:}
+
+\vspace{0.2cm}
+
+Dr. Raghav B Venkataramaiyer
+
+\vspace{0.2cm}
+
+Department of Computer Science and Engineering
+
+\vspace{0.2cm}
+
+Thapar Institute of Engineering and Technology
+
+\vspace{1cm}
+
+\textbf{Submitted By}
+
+\vspace{0.4cm}
+
+\begin{tabular}{ll}
+Name & Roll Number \\
+Gaurish Garg & 1024170019 \\
+Sumit Singh & 1024170018 \\
+Arav Garg & 1024170418
+\end{tabular}
+
+\vfill
+
+\textbf{Academic Year 2026--27}
+
+\end{center}
+
+\end{titlepage}
+
+% =========================
+% CONTENTS
+% =========================
+
+\tableofcontents
+\newpage
+
+% =========================
+% 1
+% =========================
+
+\section{Introduction}
+
+Campus Maintenance Intelligence is a smart maintenance management system designed for educational campuses. It manages complaints related to electrical systems, plumbing, AC, housekeeping, masonry, painting, fire systems and other facilities.
+
+Traditional maintenance systems generally process complaints using first-come-first-served methods. This may result in critical problems being handled after less important complaints.
+
+The proposed system uses complaint information, location, severity, affected users and historical maintenance data to assign suitable priorities.
+
+The system follows five major stages:
+
+\begin{center}
+\textbf{Structure $\rightarrow$ Cluster $\rightarrow$ Prioritize $\rightarrow$ Predict $\rightarrow$ Optimize}
+\end{center}
+
+This allows the system to move from simple complaint registration towards intelligent and proactive maintenance.
+
+
+% =========================
+% 2
+% =========================
+
+\section{Problem Statement}
+
+Large campuses generate many maintenance complaints every day. Handling these complaints manually creates several problems:
+
+\begin{itemize}
+    \item Critical complaints may not receive immediate attention.
+    \item Multiple users may report the same problem.
+    \item Recurring failures are difficult to identify.
+    \item Historical maintenance data is not fully utilized.
+    \item Technician and maintenance resources may be allocated inefficiently.
+\end{itemize}
+
+Therefore, a system is required that can automatically prioritize complaints, identify duplicates, predict possible failures and assist in maintenance planning.
+
+
+% =========================
+% 3
+% =========================
+
+\section{Proposed Solution}
+
+The proposed system provides a centralized platform for campus maintenance.
+
+When a complaint is submitted, the system:
+
+\begin{enumerate}
+    \item Extracts important information from the complaint.
+    \item Identifies similar or duplicate complaints.
+    \item Assigns a priority based on severity, safety, location and affected users.
+    \item Stores the complaint as an incident or work order.
+    \item Uses historical data to identify possible future failures.
+    \item Helps optimize maintenance resources.
+\end{enumerate}
+
+For example, an electrical short circuit in a hostel can receive a higher priority than a routine fan repair even if the fan complaint was submitted earlier.
+
+
+% =========================
+% 4
+% =========================
+
+\section{Project Objectives}
+
+The main objectives are:
+
+\begin{itemize}
+    \item Develop a centralized campus maintenance platform.
+    \item Automatically prioritize maintenance complaints.
+    \item Detect duplicate and related complaints.
+    \item Identify recurring maintenance problems.
+    \item Predict possible future failures.
+    \item Improve technician and resource allocation.
+    \item Provide a dashboard for maintenance staff.
+    \item Compare intelligent prioritization with first-come-first-served processing.
+\end{itemize}
+
+
+% =========================
+% 5
+% =========================
+
+\section{System Overview}
+
+The system consists of the following major modules:
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+
+\begin{tabular}{p{0.30\textwidth} p{0.55\textwidth}}
+\toprule
+\textbf{Module} & \textbf{Purpose} \\
+\midrule
+
+Complaint Management &
+Register and track maintenance complaints. \\
+
+Priority Engine &
+Assign priority according to severity and campus context. \\
+
+Duplicate Detection &
+Identify complaints referring to the same problem. \\
+
+Incident Management &
+Combine related complaints into a single incident. \\
+
+Predictive Maintenance &
+Identify assets that may fail in the future. \\
+
+Optimization &
+Help allocate technicians and maintenance resources. \\
+
+Dashboard &
+Display complaints, priorities and maintenance statistics. \\
+
+\bottomrule
+\end{tabular}
+
+\caption{Major System Modules}
+
+\end{table}
+
+
+% =========================
+% 6
+% =========================
+
+\section{Technology Stack}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+
+\begin{tabular}{p{0.35\textwidth} p{0.45\textwidth}}
+\toprule
+\textbf{Component} & \textbf{Technology} \\
+\midrule
+Frontend & Next.js, React.js, Tailwind CSS \\
+Backend & FastAPI, Python \\
+Database & PostgreSQL \\
+Machine Learning & XGBoost, Random Forest \\
+NLP & Sentence Transformers \\
+Similarity Search & FAISS \\
+Data Processing & Pandas, NumPy \\
+Optimization & OR-Tools \\
+Version Control & Git, GitHub \\
+Deployment & Docker \\
+\bottomrule
+\end{tabular}
+
+\caption{Technology Stack}
+
+\end{table}
+
+
+% =========================
+% 7
+% =========================
+
+\section{Dataset}
+
+The project will use complaint and historical maintenance data.
+
+Complaint data will contain information such as:
+
+\begin{itemize}
+    \item Complaint description
+    \item Category and problem type
+    \item Building and location
+    \item Timestamp
+    \item Priority
+    \item Incident ID
+\end{itemize}
+
+Historical maintenance data will contain information such as building details, maintenance work orders, repair costs, maintenance priority and labor hours.
+
+A synthetic benchmark dataset will initially be used for testing. It will represent campus locations such as hostels, blocks, lecture theatres, the CSED department and the library.
+
+The dataset will contain maintenance categories including electrical, plumbing, AC, carpentry, masonry, painting, housekeeping and fire systems.
+
+
+% =========================
+% 8
+% =========================
+
+\section{Development Methodology}
+
+The project will be developed using an Agile approach.
+
+The major stages are:
+
+\begin{enumerate}
+    \item Requirement analysis
+    \item Dataset preparation
+    \item Database and system design
+    \item Backend development
+    \item Frontend development
+    \item Machine learning development
+    \item System integration
+    \item Testing
+    \item Deployment
+\end{enumerate}
+
+
+% =========================
+% 9
+% =========================
+
+\section{Expected Outcomes}
+
+The project is expected to provide:
+
+\begin{itemize}
+    \item Faster identification of critical complaints.
+    \item Reduction in duplicate complaint handling.
+    \item Better maintenance prioritization.
+    \item Identification of recurring problems.
+    \item Early detection of possible failures.
+    \item Better utilization of maintenance resources.
+    \item A centralized maintenance dashboard.
+\end{itemize}
+
+
+% =========================
+% 10
+% =========================
+
+\section{Future Scope}
+
+The system can later be extended with:
+
+\begin{itemize}
+    \item IoT sensors for real-time infrastructure monitoring.
+    \item Image-based detection of infrastructure damage.
+    \item Mobile application for maintenance workers.
+    \item Automated technician assignment.
+    \item Advanced failure prediction.
+    \item Integration with the actual university maintenance system.
+\end{itemize}
+
+
+% =========================
+% 11
+% =========================
+
+\section{Conclusion}
+
+Campus Maintenance Intelligence aims to transform traditional campus maintenance into a more intelligent and data-driven process.
+
+The system combines complaint management, priority assignment, duplicate detection, predictive maintenance and resource optimization in a single platform.
+
+By using historical and synthetic maintenance data, the system can be developed and evaluated before deployment in a real campus environment.
+
+\begin{center}
+
+\vspace{0.5cm}
+
+\textbf{Campus Maintenance Intelligence}
+
+\textit{Report. Prioritize. Predict. Optimize.}
+
+\end{center}
+
+\end{document}
